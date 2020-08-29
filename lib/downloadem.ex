@@ -79,7 +79,6 @@ defmodule Downloadem do
           listen_and_trap_exit_signal(new_tasks_list)
 
       #When task terminate, parent process received back its monitor_reference it triggered before when process created (by Task.async). Parent process implicitly call "Process.monitoring(task_PID)" so it can monitor the status of that task. Eg: monitor_reference = #Reference<0.906660723.3006791681.40191>
-
       other_msg ->
           {monitor_reference, {youtube_dl_message, 0}} = other_msg
           Tools.write_result_log("#{inspect(monitor_reference)}\n" <> youtube_dl_message)
