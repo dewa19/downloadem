@@ -1,0 +1,105 @@
+
+2020-08-28:18-10-01 | Download BEGIN : [https://www.youtube.com/watch?v=up-WBD6vc4o]
+2020-08-28:18-10-01 | Download BEGIN : [https://www.youtube.com/watch?v=hXdfZTphZ9w]
+2020-08-28:18-10-06 | #Reference<0.2807994242.1058799620.29479>
+[youtube] up-WBD6vc4o: Downloading webpage
+[youtube] up-WBD6vc4o: Downloading video info webpage
+[youtube] up-WBD6vc4o: Downloading MPD manifest
+[download] /home/sigit/Elixir/real-project/downloadem/downloaded/Numbers, Atoms, Boolean, Tuples, List, Strings, Records, Maps and Terms _ Erlang_OTP Tutorial-up-WBD6vc4o.mp4 has already been downloaded
+[download] Download completed
+
+2020-08-28:18-10-06 | Download END : [https://www.youtube.com/watch?v=up-WBD6vc4o]
+2020-08-28:18-10-06 | #Reference<0.2807994242.1058799620.29480>
+[youtube] hXdfZTphZ9w: Downloading webpage
+[youtube] hXdfZTphZ9w: Downloading video info webpage
+[youtube] hXdfZTphZ9w: Downloading MPD manifest
+[download] /home/sigit/Elixir/real-project/downloadem/downloaded/Learn how to use Pattern Matching _ Erlang_OTP Tutorial-hXdfZTphZ9w.mp4 has already been downloaded
+[download] Download completed
+
+2020-08-28:18-10-06 | Download END : [https://www.youtube.com/watch?v=hXdfZTphZ9w]
+2020-08-28:21-10-54 | Download BEGIN : [https://www.youtube.com/watch?v=up-WBD6vc4o]
+2020-08-28:21-10-54 | Download BEGIN : [https://www.youtube.com/watch?v=hXdfZTphZ9w]
+2020-08-28:21-11-01 | #Reference<0.450163028.1355546627.75258>
+[youtube] hXdfZTphZ9w: Downloading webpage
+[youtube] hXdfZTphZ9w: Downloading video info webpage
+[youtube] hXdfZTphZ9w: Downloading MPD manifest
+[download] Destination: downloaded/Learn how to use Pattern Matching _ Erlang_OTP Tutorial-hXdfZTphZ9w.mp4
+[download] Download completed
+
+2020-08-28:21-11-01 | Download END : [https://www.youtube.com/watch?v=hXdfZTphZ9w]
+2020-08-28:21-11-02 | #Reference<0.450163028.1355546627.75257>
+[youtube] up-WBD6vc4o: Downloading webpage
+[youtube] up-WBD6vc4o: Downloading video info webpage
+[youtube] up-WBD6vc4o: Downloading MPD manifest
+[download] Destination: downloaded/Numbers, Atoms, Boolean, Tuples, List, Strings, Records, Maps and Terms _ Erlang_OTP Tutorial-up-WBD6vc4o.mp4
+[download] Download completed
+
+2020-08-28:21-11-02 | Download END : [https://www.youtube.com/watch?v=up-WBD6vc4o]
+2020-08-28:21-43-29 | Download BEGIN : [https://www.youtube.com/watch?v=up-WBD6vc4o]
+2020-08-28:21-43-29 | Download BEGIN : [https://www.youtube.com/watch?v=hXdfZTphZ9w]
+2020-08-28:21-43-34 | #Reference<0.2336531836.2167406593.165862>
+[youtube] hXdfZTphZ9w: Downloading webpage
+[youtube] hXdfZTphZ9w: Downloading video info webpage
+[youtube] hXdfZTphZ9w: Downloading MPD manifest
+[download] downloaded/Learn how to use Pattern Matching _ Erlang_OTP Tutorial-hXdfZTphZ9w.mp4 has already been downloaded
+[download] Download completed
+
+2020-08-28:21-43-34 | Download END : [https://www.youtube.com/watch?v=hXdfZTphZ9w]
+2020-08-28:21-43-34 | #Reference<0.2336531836.2167406593.165861>
+[youtube] up-WBD6vc4o: Downloading webpage
+[youtube] up-WBD6vc4o: Downloading video info webpage
+[youtube] up-WBD6vc4o: Downloading MPD manifest
+[download] downloaded/Numbers, Atoms, Boolean, Tuples, List, Strings, Records, Maps and Terms _ Erlang_OTP Tutorial-up-WBD6vc4o.mp4 has already been downloaded
+[download] Download completed
+
+2020-08-28:21-43-34 | Download END : [https://www.youtube.com/watch?v=up-WBD6vc4o]
+=============================================================
+
+2020-08-28:21-59-27 | Download BEGIN : [https://www.youtube.com/watch?v=CNj1cgtGVZU]
+2020-08-28:21-59-27 | Download BEGIN : [https://www.youtube.com/watch?v=up-WBD6vc4o]
+2020-08-28:21-59-27 | Download BEGIN : [https://www.youtube.com/watch?v=0eIZ_xKy9wQ]
+2020-08-28:21-59-27 | Download BEGIN : [https://www.youtube.com/watch?v=hXdfZTphZ9w]
+2020-08-28:21-59-27 | Download BEGIN : [https://www.youtube.com/watch?v=_mUcBlD1_rQ]
+2020-08-28:21-59-27 | Download BEGIN : [https://www.youtube.com/watch?v=9_9WMivCGwA]
+2020-08-28:21-59-27 | Download BEGIN : [https://www.youtube.com/watch?v=VdaujR2QFyc]
+2020-08-28:21-59-27 | Download BEGIN : [https://www.youtube.com/watch?v=rE1C69H3xWw]
+2020-08-28:21-59-27 | Download BEGIN : [https://www.youtube.com/watch?v=KDZ-5qrFl6A]
+2020-08-28:21-59-27 | Download BEGIN : [https://www.youtube.com/watch?v=IJ6fr1uorEE]
+2020-08-28:21-59-27 | Download BEGIN : [https://www.youtube.com/watch?v=AVdAMoJ31IU]
+2020-08-28:21-59-27 | Download BEGIN : [https://www.youtube.com/watch?v=0oWlmMj4bGw]
+2020-08-28:21-59-27 | Download BEGIN : [https://www.youtube.com/watch?v=evVyB0Q1dHE]
+2020-08-28:21-59-27 | Download BEGIN : [https://www.youtube.com/watch?v=KCPSdpftmco]
+2020-08-28:22-02-56 | Download BEGIN : [https://www.youtube.com/watch?v=_mUcBlD1_rQ]
+2020-08-28:22-55-56 | Download BEGIN : [https://www.youtube.com/watch?v=7-qGKqveZaM]
+2020-08-28:22-55-56 | Download BEGIN : [https://www.youtube.com/watch?v=hF83JAmBdjY]
+2020-08-28:22-55-56 | Download BEGIN : [https://www.youtube.com/watch?v=tPEE9ZwTmy0]
+2020-08-28:22-55-56 | Download BEGIN : [https://www.youtube.com/watch?v=XZsFbB3lV1A]
+2020-08-28:22-56-01 | #Reference<0.2151570047.835977223.54909>
+[youtube] 7-qGKqveZaM: Downloading webpage
+[youtube] 7-qGKqveZaM: Downloading video info webpage
+[download] Destination: downloaded/Shortest Video on Youtube EVER! 0 seconds nearly 1 (fastest)-7-qGKqveZaM.mp4
+[download] Download completed
+
+2020-08-28:22-56-01 | Download END : [https://www.youtube.com/watch?v=7-qGKqveZaM]
+2020-08-28:22-56-01 | #Reference<0.2151570047.835977223.54910>
+[youtube] tPEE9ZwTmy0: Downloading webpage
+[youtube] tPEE9ZwTmy0: Downloading video info webpage
+[download] Destination: downloaded/Shortest Video on Youtube-tPEE9ZwTmy0.mp4
+[download] Download completed
+
+2020-08-28:22-56-01 | Download END : [https://www.youtube.com/watch?v=tPEE9ZwTmy0]
+2020-08-28:22-56-01 | #Reference<0.2151570047.835977223.54911>
+[youtube] XZsFbB3lV1A: Downloading webpage
+[youtube] XZsFbB3lV1A: Downloading video info webpage
+[youtube] XZsFbB3lV1A: Downloading MPD manifest
+[download] Destination: downloaded/Startled Hamster-XZsFbB3lV1A.mp4
+[download] Download completed
+
+2020-08-28:22-56-01 | Download END : [https://www.youtube.com/watch?v=XZsFbB3lV1A]
+2020-08-28:22-56-01 | #Reference<0.2151570047.835977223.54912>
+[youtube] hF83JAmBdjY: Downloading webpage
+[youtube] hF83JAmBdjY: Downloading video info webpage
+[download] Destination: downloaded/Kendall Miles - Isla Bella-hF83JAmBdjY.mp4
+[download] Download completed
+
+2020-08-28:22-56-01 | Download END : [https://www.youtube.com/watch?v=hF83JAmBdjY]
