@@ -57,10 +57,10 @@ Two easy steps to install:
 a. In case you don't have *youtube-dl* in your remote machine, copy it from your local machine
 eg :
 ```
-scp  /local_machine/youtube-dl username@xxx.xxx.xxx.xxx:/remote_machine/downloadem/download_engine
+scp /local_machine/youtube-dl username@xxx.xxx.xxx.xxx:/remote_machine/downloadem/download_engine
 ```
 
-b. Open *downloadem.ex*, you might want to adjust following variables :
+b. Open *downloadem.ex*, you might want to adjust following variables : 
 ```
 @url_file_location "data/url_list.txt" #change this to preferred location
 @youtube_dl_download_folder "downloaded" #change this to preferred location
