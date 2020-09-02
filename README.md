@@ -25,7 +25,7 @@ After clone this application, make these adjustments before you start.
 
 Now you can test to compile & running the application. If everything works fine, you will see some result in standard output. Also you can see log file ```/log/downloadem_YYYYMMDD.log``` will be updated, and downloaded video are saved in ```/downloaded``` folder.
   ```
-  <your_terminal:$> iex -S mix
+  <your_machine/downloadem>$ iex -S mix
   Erlang/OTP 23 [erts-11.0.2] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [hipe]
 
   Compiling 1 file (.ex)
@@ -48,6 +48,20 @@ For the sake of curiosity of technical know-how of deployment processes, I used 
 - Direct copy-paste application structure to target machine.
 - Release and deploy using built-in Elixir tool ```mix release```.
 
+Local machine :
+```
+Ubuntu 18.04.1 LTS
+Erlang/OTP 23 [erts-11.0.2]
+Elixir (1.10.3)
+```
+
+Remote machine :
+```
+Ubuntu 16.04 LTS
+Erlang/OTP 22 [erts-10.7]
+Elixir (1.10.2)
+```
+
 #### 1. Direct copy-paste to target machine
 
 Assuming the target machine already has all component needed for running basic Elixir application (ie: Erlang Runtime System & Elixir compiler), the simplest way to running the application from command line is to copy/upload all application's directory structure to remote machine and execute it there with ```mix run``` command.
@@ -57,25 +71,25 @@ Two easy steps to install:
 a. In case you don't have *youtube-dl* in your remote machine, copy it from your local machine
 eg :
 ```
-scp /local_machine/youtube-dl username@xxx.xxx.xxx.xxx:/remote_machine/downloadem/download_engine
+scp /local_machine/youtube-dl username@xxx.xxx.xxx.xxx:/target_machine/downloadem/download_engine
 ```
 
 b. Open *downloadem.ex*, you might want to adjust following variables :
 ```
 @url_file_location "data/url_list.txt" #change this to preferred location
 @youtube_dl_download_folder "downloaded" #change this to preferred location
-@youtube_dl_executable_file "/home/your_remote_machine/downloadem/download_engine/youtube-dl"
+@youtube_dl_executable_file "/home/your_target_machine/downloadem/download_engine/youtube-dl"
 ```
 If everything goes well, then you can run it this way:
 
 ```
-your_remote_machine/downloadem>$ mix run -e "Downloadem.execute_download()"
+<target_machine/downloadem>$ mix run -e "Downloadem.execute_download()"
 Compiling 1 file (.ex)
 Download BEGIN : [https://www.youtube.com/watch?v=7-qGKqveZaM]
 Download BEGIN : [https://www.youtube.com/watch?v=tPEE9ZwTmy0]
 Download END : [https://www.youtube.com/watch?v=tPEE9ZwTmy0]
 Download END : [https://www.youtube.com/watch?v=7-qGKqveZaM]
-your_remote_machine/downloadem>$
+<target_machine/downloadem>$
 ```
 
 #### 2. Deployment using [Mix Releases](https://hexdocs.pm/mix/Mix.Tasks.Release.html)
@@ -84,7 +98,7 @@ your_remote_machine/downloadem>$
 
   - Initiate release process
     ```
-    $your_local_machine/downloadem>$ mix release.init
+    <local_machine/downloadem>$ mix release.init
     ```
 
   - Add this part in your mix.exs, under "project"
@@ -104,13 +118,12 @@ your_remote_machine/downloadem>$
 
   - Build package
     ```
-    $your_local_machine/downloadem>$ MIX_ENV=prod mix release downloadem_linux
+    <local_machine/downloadem>$ MIX_ENV=prod mix release downloadem_linux
     ```
 
 **b) Deployment**
 
   - Copy tar.gz to target machine
-    eg:
     ```
     scp downloadem_linux-0.1.0.tar.gz username@xxx.xxx.xxx.xxx:target_machine/downloadem_linux/
     ```
