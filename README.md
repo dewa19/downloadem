@@ -41,7 +41,6 @@ Download END : [https://www.youtube.com/watch?v=tPEE9ZwTmy0]
 Download END : [https://www.youtube.com/watch?v=7-qGKqveZaM]
 :ok
 iex(2)>
-
 ```
 
 ## Deployment
@@ -63,7 +62,6 @@ b. Open *downloadem.ex*, you might want to adjust following variables :
 @url_file_location "data/url_list.txt" #change this to preferred location
 @youtube_dl_download_folder "downloaded" #change this to preferred location
 @youtube_dl_executable_file "/home/your_remote_machine/downloadem/download_engine/youtube-dl"
-
 ```
 If everything goes well, then you can run it this way:
 
@@ -75,7 +73,6 @@ Download BEGIN : [https://www.youtube.com/watch?v=tPEE9ZwTmy0]
 Download END : [https://www.youtube.com/watch?v=tPEE9ZwTmy0]
 Download END : [https://www.youtube.com/watch?v=7-qGKqveZaM]
 your_remote_machine/downloadem>$
-
 ```
 
 #### 2. Deployment using [Mix Releases](https://hexdocs.pm/mix/Mix.Tasks.Release.html)
@@ -85,7 +82,6 @@ your_remote_machine/downloadem>$
   - Initiate release process
     ```
     $your_local_machine/downloadem>$ mix release.init
-
     ```
 
   - Add this part in your mix.exs, under "project"
@@ -106,7 +102,6 @@ your_remote_machine/downloadem>$
   - Build package
     ```
     $your_local_machine/downloadem>$ MIX_ENV=prod mix release downloadem_linux
-
     ```
 
 **b) Deployment**
@@ -114,14 +109,12 @@ your_remote_machine/downloadem>$
   - Copy tar.gz to target machine
     eg:
     ```
-    scp downloadem_linux-0.1.0.tar.gz   username@xxx.xxx.xxx.xxx:target_machine/downloadem_linux/
-
+    scp downloadem_linux-0.1.0.tar.gz username@xxx.xxx.xxx.xxx:target_machine/downloadem_linux/
     ```
 
   - Extract package file
     ```
     <target_machine/downloadem_linux>$ tar -xf  downloadem_linux-0.1.0.tar.gz
-
     ```
 
   - Execute program
@@ -131,7 +124,6 @@ your_remote_machine/downloadem>$
     Download BEGIN : [https://www.youtube.com/watch?v=tPEE9ZwTmy0]
     Download END : [https://www.youtube.com/watch?v=tPEE9ZwTmy0]
     Download END : [https://www.youtube.com/watch?v=7-qGKqveZaM]
-
     ```
 
  That's the final step of deployment process. I wrote some notes/finding during this process [here](TBD)
