@@ -3,7 +3,7 @@ defmodule Downloadem.Application do
 
   def start(_type, _args) do
     children = [
-      {Downloadem.Storage, []}
+      {Downloadem.Storage, []},
     ]
 
     opts = [strategy: :one_for_one, name: Downloadem.Supervisor]

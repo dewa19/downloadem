@@ -7,13 +7,28 @@ defmodule Downloadem.MixProject do
       version: "0.1.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      releases: [
+        downloadem_linux: [
+          include_executables_for: [:unix],
+          applications: [runtime_tools: :permanent],
+          include_erts: true,
+          path: "/home/sigit/Elixir/DOWNLOADEM/Release",
+          steps: [:assemble, :tar]
+          #overlay: "/home/sigit/Apps/youtube-dl/youtube-dl"
+        ],
+        downloadem_windows: [
+          include_executables_for: [:windows],
+          applications: [runtime_tools: :permanent]
+        ]
+      ]
     ]
   end
 
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      #mod: {Downloadem.execute_download, []},
       extra_applications: [:logger]
     ]
   end
@@ -21,7 +36,7 @@ defmodule Downloadem.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:distillery, "~> 2.1"}
+      #{:distillery, "~> 2.1"}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
