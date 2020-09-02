@@ -55,8 +55,7 @@ Two easy steps to install:
 a. In case you don't have *youtube-dl* in your remote machine, copy it from your local machine
 eg :
 ```
-scp  /home/your_local_machine/Downloads/youtube-dl  username@xxx.xxx.xxx.xxx:/home/your_remote_machine/downloadem/download_engine
-
+scp  /local_machine/Downloads/youtube-dl username@xxx.xxx.xxx.xxx:/remote_machine/downloadem/download_engine
 ```
 
 b. Open *downloadem.ex*, you might want to adjust following variables :
@@ -90,17 +89,16 @@ your_remote_machine/downloadem>$
     ```
 
   - Add this part in your mix.exs, under "project"
-  ```
-  releases: [
-    downloadem_linux: [
-      include_executables_for: [:unix],
-      applications: [runtime_tools: :permanent],
-      include_erts: true,
-      path: "/path_where_release_package_will_be_saved/Release",
-      steps: [:assemble, :tar]
-    ]
-
     ```
+    releases: [
+      downloadem_linux: [
+        include_executables_for: [:unix],
+        applications: [runtime_tools: :permanent],
+        include_erts: true,
+        path: "/path_where_release_package_will_be_saved/Release",
+        steps: [:assemble, :tar]
+      ]
+      ```
 
   - Copy following folders into ```rel/overlays``` : data, download_engine, downloaded, & log
     (everything under ```rel/overlays``` will be included in final tar.gz package)
@@ -108,7 +106,7 @@ your_remote_machine/downloadem>$
   - Build package
     ```
     $your_local_machine/downloadem>$ MIX_ENV=prod mix release downloadem_linux
-    
+
     ```
 
 **b) Deployment**
