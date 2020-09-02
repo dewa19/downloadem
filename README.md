@@ -12,7 +12,7 @@ The benefit of this approach is that all download processes running simultaneous
 
 ### Prerequisites
 
-1. This application utilizes external download engine, *youtube-dl*. You need to install this program first, because later in application script you will need to specify absolute full path of this executable *youtube-dl*.
+1. This application utilizes external download engine, *youtube-dl*. You need to install this program first,  later in application script you will need to specify absolute full path of this executable *youtube-dl*.
 2. You need to specify the list of Youtube video URLs you want to download, in newline-delimited text file in ```/data/url_list.txt```. As a sample, there are 2 URLs there. You can add or replace them with yours.
 
 ### Installing
@@ -20,30 +20,33 @@ The benefit of this approach is that all download processes running simultaneous
 After clone this application, make these adjustments before you start.
 
 1. Under application directory, open ```/lib/downloadem.ex```
-2. Change this constant value according to your local setting, @youtube_dl_executable_file
+2. Change this constant value according to your local setting, ```@youtube_dl_executable_file```
 3. Add some URLs of Youtube video you want to download into this file ```/data/url_list.txt```
 
-Now you can test to compile & running the application.
-If everything works fine, you will see some result in standard output. Also you can see log file ```/log/downloadem_YYYYMMDD.log``` will be updated, and downloaded video are saved in ```/downloaded``` folder.
+Now you can test to compile & running the application. If everything works fine, you will see some result in standard output. Also you can see log file ```/log/downloadem_YYYYMMDD.log``` will be updated, and downloaded video are saved in ```/downloaded``` folder.
+  ```
+  <your_terminal:$> iex -S mix
+  Erlang/OTP 23 [erts-11.0.2] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [hipe]
 
-That's it!
-```
-<your_terminal:$> iex -S mix
-Erlang/OTP 23 [erts-11.0.2] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [hipe]
+  Compiling 1 file (.ex)
+  Interactive Elixir (1.10.3) - press Ctrl+C to exit (type h() ENTER for help)
 
-Compiling 1 file (.ex)
-Interactive Elixir (1.10.3) - press Ctrl+C to exit (type h() ENTER for help)
+  iex(1)> Downloadem.execute_download()
+  Download BEGIN : [https://www.youtube.com/watch?v=7-qGKqveZaM]
+  Download BEGIN : [https://www.youtube.com/watch?v=tPEE9ZwTmy0]
+  Download END : [https://www.youtube.com/watch?v=tPEE9ZwTmy0]
+  Download END : [https://www.youtube.com/watch?v=7-qGKqveZaM]
+  :ok
+  iex(2)>
+  ```
+That's it! You should be have no problem of execute the program from your local environment. The next step is, how to build release and deploy it into target machine.
 
-iex(1)> Downloadem.execute_download()
-Download BEGIN : [https://www.youtube.com/watch?v=7-qGKqveZaM]
-Download BEGIN : [https://www.youtube.com/watch?v=tPEE9ZwTmy0]
-Download END : [https://www.youtube.com/watch?v=tPEE9ZwTmy0]
-Download END : [https://www.youtube.com/watch?v=7-qGKqveZaM]
-:ok
-iex(2)>
-```
 
 ## Deployment
+
+For the sake of curiosity of technical know-how of deployment processes, I used 2 different approaches :
+- Direct copy-paste application structure to target machine.
+- Release and deploy using built-in Elixir tool ```mix release```.
 
 #### 1. Direct copy-paste to target machine
 
@@ -54,7 +57,7 @@ Two easy steps to install:
 a. In case you don't have *youtube-dl* in your remote machine, copy it from your local machine
 eg :
 ```
-scp  /local_machine/Downloads/youtube-dl username@xxx.xxx.xxx.xxx:/remote_machine/downloadem/download_engine
+scp  /local_machine/youtube-dl username@xxx.xxx.xxx.xxx:/remote_machine/downloadem/download_engine
 ```
 
 b. Open *downloadem.ex*, you might want to adjust following variables :
