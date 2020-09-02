@@ -46,7 +46,7 @@ iex(2)>
 
 ## Deployment
 
-######1. Direct copy-paste to target machine
+#### 1. Direct copy-paste to target machine
 
 Assuming the target machine already has all component needed for running basic Elixir application (ie: Erlang Runtime System & Elixir compiler), the simplest way to running the application from command line is to copy/upload all application's directory structure to remote machine and execute it there with ```mix run``` command.
 
@@ -54,7 +54,9 @@ Two easy steps to install:
 
 a. In case you don't have *youtube-dl* in your remote machine, copy it from your local machine
 eg :
-``` scp  /home/your_local_machine/Downloads/youtube-dl  username@xxx.xxx.xxx.xxx:/home/your_remote_machine/downloadem/download_engine
+```
+scp  /home/your_local_machine/Downloads/youtube-dl  username@xxx.xxx.xxx.xxx:/home/your_remote_machine/downloadem/download_engine
+
 ```
 
 b. Open *downloadem.ex*, you might want to adjust following variables :
@@ -77,12 +79,14 @@ your_remote_machine/downloadem>$
 
 ```
 
-######2. Deployment using [Mix Releases](https://hexdocs.pm/mix/Mix.Tasks.Release.html)
+#### 2. Deployment using [Mix Releases](https://hexdocs.pm/mix/Mix.Tasks.Release.html)
 
-a) Release (Building Package)
+**a) Release (Building Package)**
 
   - Initiate release process
-    ```$your_local_machine/downloadem>$ mix release.init
+    ```
+    $your_local_machine/downloadem>$ mix release.init
+
     ```
 
   - Add this part in your mix.exs, under "project"
@@ -95,6 +99,7 @@ a) Release (Building Package)
       path: "/path_where_release_package_will_be_saved/Release",
       steps: [:assemble, :tar]
     ]
+
     ```
 
   - Copy following folders into ```rel/overlays``` : data, download_engine, downloaded, & log
@@ -103,19 +108,22 @@ a) Release (Building Package)
   - Build package
     ```
     $your_local_machine/downloadem>$ MIX_ENV=prod mix release downloadem_linux
+    
     ```
 
-b) Deployment
+**b) Deployment**
 
   - Copy tar.gz to target machine
     eg:
     ```
     scp downloadem_linux-0.1.0.tar.gz   username@xxx.xxx.xxx.xxx:target_machine/downloadem_linux/
+
     ```
 
   - Extract package file
     ```
     <target_machine/downloadem_linux>$ tar -xf  downloadem_linux-0.1.0.tar.gz
+
     ```
 
   - Execute program
@@ -125,6 +133,7 @@ b) Deployment
     Download BEGIN : [https://www.youtube.com/watch?v=tPEE9ZwTmy0]
     Download END : [https://www.youtube.com/watch?v=tPEE9ZwTmy0]
     Download END : [https://www.youtube.com/watch?v=7-qGKqveZaM]
+
     ```
 
  That's the final step of deployment process. I wrote some notes/finding during this process [here](TBD)
