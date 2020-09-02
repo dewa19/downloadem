@@ -1,12 +1,12 @@
 # Downloadem
 
-<b>Downloadem</b> is an implementation of Elixir wrapper for simultaneously Youtube video downloader. It builds on top of [youtube-dl](https://youtube-dl.org/).
+**Downloadem** is an implementation of Elixir wrapper for simultaneously Youtube's video downloader. It builds on top of [youtube-dl](https://youtube-dl.org/).
 
 ## Getting Started
 
-Downloadem build on top of *youtube-dl*, an cli-based youtube.com video downloader. It will read a file contain list urls of youtube videos (not a playlist) and download them simultaneously by creating separated process running *youtube-dl* for each url. All videos will be saved in a ```/downloaded/``` folder under root application directory structure.
+**Downloadem** build on top of *youtube-dl*, an cli-based youtube.com video downloader. It reads a file contain list urls of youtube videos (not a playlist) and download them simultaneously by creating separated process running *youtube-dl* for each url. All videos will be saved in a ```/downloaded/``` folder inside application directory structure.
 
-The benefit of this approach is that all download processes running simultaneously. ~~As far as I know youtube-dl can download multiple urls by putting each url one after another, but still they will be executed sequentially that means the next download will happening once previous download process completed.~~
+The benefit of this approach is that all download processes running simultaneously. Every process running on its own, without having to wait each other. ~~CMIIW, as far as I know youtube-dl can download multiple urls by putting each url one after another, but they will be executed sequentially that means the next download will happening once previous download process completed.~~
 
 *I wrote this as part of my journey of learning Elixir as backend service, so yes it's for educational purpose.*
 
@@ -60,7 +60,7 @@ eg :
 scp /local_machine/youtube-dl username@xxx.xxx.xxx.xxx:/remote_machine/downloadem/download_engine
 ```
 
-b. Open *downloadem.ex*, you might want to adjust following variables : 
+b. Open *downloadem.ex*, you might want to adjust following variables :
 ```
 @url_file_location "data/url_list.txt" #change this to preferred location
 @youtube_dl_download_folder "downloaded" #change this to preferred location
