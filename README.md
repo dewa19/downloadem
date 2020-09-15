@@ -142,4 +142,3 @@ Download END : [https://www.youtube.com/watch?v=7-qGKqveZaM]
     Download END : [https://www.youtube.com/watch?v=7-qGKqveZaM]
     ```
 
- That's the final step of deployment process. I wrote some notes/finding during this process [here](TBD)
